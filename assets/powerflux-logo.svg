@@ -1,0 +1,41 @@
+<svg width="720" height="240" viewBox="0 0 720 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pf-grad" x1="0" x2="1">
+      <stop offset="0" stop-color="#7F37FF"></stop>
+      <stop offset="1" stop-color="#2BB4FF"></stop>
+    </linearGradient>
+    <linearGradient id="pf-grad2" x1="0" x2="1">
+      <stop offset="0" stop-color="#FF2EC8"></stop>
+      <stop offset="1" stop-color="#4A9EFF"></stop>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle glow -->
+  <circle cx="120" cy="120" r="84" fill="url(#pf-grad2)" opacity="0.25" filter="url(#glow)"></circle>
+
+  <!-- Outer ring -->
+  <circle cx="120" cy="120" r="72" stroke="url(#pf-grad)" stroke-width="10" fill="none"></circle>
+
+  <!-- Lightning bolt -->
+  <path d="M108 78 L140 108 H122 L136 162 L94 122 H112 L108 78 Z" fill="url(#pf-grad)" filter="url(#glow)"></path>
+
+  <!-- TEXT -->
+  <text x="220" y="108" font-family="Segoe UI, Poppins, Arial" font-size="48" font-weight="700" fill="#E8EEFF">
+    Anxinity PowerFlux
+  </text>
+
+  <text x="220" y="150" font-family="Segoe UI, Poppins, Arial" font-size="22" fill="#A7B4D8" letter-spacing="0.5px">
+    Advanced Watt Control Engine
+  </text>
+
+  <text x="220" y="182" font-family="JetBrains Mono, monospace" font-size="16" fill="#6FA8FF" letter-spacing="3px">
+    PROJECT ANXINITY
+  </text>
+</svg>
