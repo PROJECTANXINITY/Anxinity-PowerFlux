@@ -1,0 +1,7 @@
+id=anxinity_powerflux
+name=Anxinity PowerFlux - Advanced Watt Control Engine
+version=v1.0
+versionCode=1
+author=Felix (@Felixx_ferdinandd)
+description=Premium watt-control engine with live power monitoring, profile-based charging, KernelSU WebUI, and adaptive sysfs node detection.
+updateJson=https://raw.githubusercontent.com/PROJECTANXINITY/Anxinity-PowerFlux/main/update.json
