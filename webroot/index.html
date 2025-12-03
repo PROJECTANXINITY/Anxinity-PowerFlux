@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anxinity PowerFlux — Watt Engine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <!-- Inline SVG logo -->
+      <div class="logo">
+        <!-- use assets/logo.svg as <img> if preferred -->
+        <img src="assets/logo.svg" alt="Anxinity PowerFlux" />
+      </div>
+      <div class="meta">
+        <h1>Anxinity PowerFlux</h1>
+        <p class="sub">Advanced Watt Control Engine — PROJECT ANXINITY</p>
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card control">
+        <h2>Watt Profiles</h2>
+        <p class="muted">Select safe, balanced, or performance charging.</p>
+        <div class="controls">
+          <select id="watt-select" aria-label="Select watt profile">
+            <option value="33">33W — Cool & Safe</option>
+            <option value="45">45W — Daily Driver</option>
+            <option value="60">60W — Balanced</option>
+            <option value="90">90W — Hyper Boost</option>
+            <option value="120">120W — Extreme Burst</option>
+          </select>
+          <button id="apply-btn" class="btn">Apply Profile</button>
+        </div>
+        <p class="foot">Changes applied live. Check Live Monitor for realtime values.</p>
+      </article>
+
+      <article class="card monitor">
+        <h2>Live Monitor</h2>
+        <div class="gauge-wrap">
+          <svg id="gauge" viewBox="0 0 200 100" class="gauge">
+            <defs>
+              <linearGradient id="gA"><stop offset="0" stop-color="#6D28D9"/><stop offset="1" stop-color="#EC4899"/></linearGradient>
+            </defs>
+            <path d="M10 90 A90 90 0 0 1 190 90" fill="none" stroke="#12202b" stroke-width="14" stroke-linecap="round"/>
+            <path id="gauge-fill" d="M10 90 A90 90 0 0 1 190 90" fill="none" stroke="url(#gA)" stroke-width="14" stroke-linecap="round" stroke-dasharray="565" stroke-dashoffset="565"/>
+            <text x="100" y="56" text-anchor="middle" class="gauge-value" id="gauge-value">-- W</text>
+            <text x="100" y="76" text-anchor="middle" class="gauge-label" id="gauge-label">Realtime</text>
+          </svg>
+        </div>
+
+        <div class="status-grid">
+          <div class="si">
+            <small>Profile</small>
+            <strong id="status-profile">—</strong>
+          </div>
+          <div class="si">
+            <small>Current</small>
+            <strong id="status-current">— µA</strong>
+          </div>
+          <div class="si">
+            <small>Voltage</small>
+            <strong id="status-voltage">— µV</strong>
+          </div>
+          <div class="si node">
+            <small>Node</small>
+            <code id="status-node">—</code>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footbar">
+      <small>Dev: @Felixx_ferdinandd • Repo: PROJECTANXINITY/Anxinity-PowerFlux</small>
+    </footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+:root{
+  --bg:#071023;
+  --card: rgba(15,23,42,0.9);
+  --muted:#9aa7c1;
+  --accent1:#6D28D9;
+  --accent2:#EC4899;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;padding:28px;background:linear-gradient(180deg,var(--bg),#020417);font-family:Inter,Roboto,system-ui,-apple-system; color:#e6eefc;
+}
+.container{max-width:980px;margin:0 auto}
+.topbar{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.logo img{height:56px;border-radius:10px}
+.meta h1{margin:0;font-size:1.05rem;letter-spacing:0.06em}
+.sub{margin:2px 0 0;font-size:0.82rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:380px 1fr;gap:14px}
+.card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.03)}
+.control .controls{display:flex;gap:10px;align-items:center;margin-top:8px}
+select{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:inherit}
+.btn{padding:10px 14px;border-radius:999px;border:none;background:linear-gradient(135deg,var(--accent1),var(--accent2));color:white;font-weight:700;cursor:pointer;box-shadow:0 10px 24px rgba(109,40,217,0.18)}
+.monitor .gauge-wrap{display:flex;justify-content:center;padding:8px}
+.gauge{width:240px;height:120px;overflow:visible}
+.gauge-value{fill:#e7eefc;font-size:18px;font-weight:700}
+.gauge-label{fill:var(--muted);font-size:11px}
+.status-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px}
+.si small{display:block;color:var(--muted);font-size:12px}
+.si strong{display:block;font-size:14px;margin-top:4px}
+.si.node code{display:block;background:rgba(0,0,0,0.2);padding:6px;border-radius:6px;font-family:monospace;font-size:12px}
+.footbar{text-align:center;margin-top:18px;color:var(--muted);font-size:12px}
+@media(max-width:880px){.grid{grid-template-columns:1fr;}}
